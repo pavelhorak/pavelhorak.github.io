@@ -109,7 +109,9 @@
 
     function drawWinners(len) {
       for (i = 0; i < len; i++) {
-        winners.push(contacts.pop(Math.floor(Math.random() * contacts.length)));
+        x = Math.floor(Math.random() * contacts.length);
+        $("#content").append("<div>" + x + "</div>");
+        winners.push(contacts.splice(x, 1));
       }
       $("#content").append("<br><br><div>...and the winners are:</div><br>");
       printWinners(len);
