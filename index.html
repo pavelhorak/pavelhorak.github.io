@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html>
 <style>
-
+.btnstyle {
+  background-color: rgb(201, 11, 51);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 48px;
+}
 </style>
 
 <head>
@@ -16,8 +25,9 @@
     <!--Add buttons to initiate auth sequence and sign out-->
     <button id="authorize_button" style="display: none;">Authorize</button>
     <button id="signout_button" style="display: none;">Sign Out</button>
-
+    
     <div id="content" style="font-size: 56px;"></div>
+    <button id="draw_button" class="btnstyle" style="display: none;" onclick="drawWinners(3)">Draw winners</button>
   </div>
   <script type="text/javascript">
     // Client ID and API key from the Developer Console
@@ -108,12 +118,13 @@
     }
 
     function drawWinners(len) {
+      $("#draw_button").attr("style", "visibility: hidden");
       for (i = 0; i < len; i++) {
         x = Math.floor(Math.random() * contacts.length);
         //$("#content").append("<div>" + x + "</div>");
         winners.push(contacts.splice(x, 1));
       }
-      $("#content").append("<br><br><div>...and the winners are:</div><br>");
+      $("#content").append("<br><div>...and the winners are:</div><br>");
       printWinners(len);
     }
 
@@ -129,7 +140,8 @@
             var row = range.values[i];
             contacts.push(row[0]);// + '  ' + row[2]);
           }
-          drawWinners(3);
+          $("#draw_button").attr("style", "visibility: block");
+          //drawWinners(3);
         } else {
           $("#content").append('No data found.');
         }
