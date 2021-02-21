@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Pavel Horak been</title>
+    <meta name="description" content="Pavel Horak visited places." />
+    <meta name="robots" content="index, follow" />
+    <meta name="referrer" content="always" />
+
+    <link
+      rel="stylesheet"
+      href="assets/css/me.css"
+      type="text/css"
+      media="screen"
+    />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  </head>
+  <body
+    id="fullsingle"
+    class="page-template-page-fullsingle-me"
+    style="background-image: none"
+  >
+    <center><p>visited places</p></center>
+    <div
+      id="places"
+      class="me-content"
+      style="display: flex; flex-wrap: wrap"
+    ></div>
+  </body>
+  <script>
+    var landmarks = [
+      "Abu Dhabi",
+      "Agra",
+      "Alexandria",
+      "Amsterdam",
+      "Atlanta",
+      "Atlantic City",
+      "Auckland",
+      "Austin",
+      "Baltimore",
+      "Bangkok",
+      "Barcelona",
+      "Basel",
+      "Beirut",
+      "Bergen",
+      "Berlin",
+      "Bologna",
+      "Boston",
+      "Bratislava",
+      "Brno",
+      "Brussels",
+      "Budapest",
+      "Burgas",
+      "Cairo",
+      "Canberra",
+      "Charleston",
+      "Chicago",
+      "Christchurch",
+      "Copenhagen",
+      "Dallas",
+      "Denver",
+      "Dubai",
+      "Dublin",
+      "Florence",
+      "Frankfurt",
+      "Genoa",
+      "Glasgow",
+      "Guangzhou",
+      "Hamburg",
+      "Hong Kong",
+      "Honolulu",
+      "Huston",
+      "Idaho Falls",
+      "Jaipur",
+      "Jerusalem",
+      "Kobenhavn",
+      "Krakow",
+      "Kyoto",
+      "Las Vegas",
+      "Lisbon",
+      "Liverpool",
+      "Ljublana",
+      "London",
+      "Los Angeles",
+      "Luxor",
+      "Malaga",
+      "Manchester",
+      "Marrakesh",
+      "Melbourne",
+      "Memphis",
+      "Miami",
+      "Milan",
+      "Milwaukee",
+      "Mombasa",
+      "Montreal",
+      "Munich",
+      "Nashville",
+      "New Delhi",
+      "New Orleans",
+      "Nice",
+      "Osaka",
+      "Oslo",
+      "Paris",
+      "Philadelphia",
+      "Phoenix",
+      "Pisa",
+      "Prague",
+      "Providence",
+      "Punta Cana",
+      "Queenstown",
+      "Reno",
+      "Reykjavik",
+      "Rijeka",
+      "Rome",
+      "Salt Lake City",
+      "Salzburg",
+      "San Antonio",
+      "San Diego",
+      "San Francisco",
+      "San Marino",
+      "Santiago de Chile",
+      "Santo Domingo",
+      "Sao Paulo",
+      "Seattle",
+      "Shanghai",
+      "Shenzen",
+      "Split",
+      "Stockholm",
+      "Sydney",
+      "Taipei",
+      "Tampa",
+      "Tel Aviv",
+      "Toronto",
+      "Trondheim",
+      "Vaduz",
+      "Vatican",
+      "Venice",
+      "Verona",
+      "Vienna",
+      "Warsaw",
+      "Washington D.C.",
+      "Wellington",
+      "Wroclaw",
+      "Zurrich",
+    ];
+    landmarks.sort();
+    landmarks.forEach(function (value) {
+      var div = document.createElement("span");
+      div.textContent = value;
+      div.setAttribute("class", "w");
+      setTimeout(function () {
+        div.style.opacity = Math.random().toFixed(1) * (1.0 - 0.4) + 0.4;
+      }, Math.random() * 2000);
+      document.getElementById("places").appendChild(div);
+    });
+  </script>
+</html>
