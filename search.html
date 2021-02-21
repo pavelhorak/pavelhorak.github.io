@@ -1,398 +1,249 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-
-<HTML><HEAD><TITLE>Hoogle</TITLE>
-
-<META http-equiv=content-type content="text/html; charset=UTF-8">
-
-<STYLE>BODY {
-
-	FONT-FAMILY: tahoma,arial,sans-serif
-
-}
-
-TD {
-
-	FONT-FAMILY: tahoma,arial,sans-serif
-
-}
-
-A {
-
-	FONT-FAMILY: tahoma,arial,sans-serif
-
-}
-
-P {
-
-	FONT-FAMILY: tahoma,arial,sans-serif
-
-}
-
-.h {
-
-	FONT-FAMILY: tahoma,arial,sans-serif
-
-}
-
-.h {
-
-	FONT-SIZE: 20px
-
-}
-
-.q {
-
-	COLOR: #0000cc
-
-}
-
-</STYLE>
-
-
-
-<SCRIPT>
-
-<!--
-
-function addField (form, fieldType, fieldName, fieldValue) {
-
-  if (document.getElementById) {
-
-    var input = document.createElement('INPUT');
-
-      if (document.all) { // what follows should work 
-
-                          // with NN6 but doesn't in M14
-
-        input.type = fieldType;
-
-        input.name = fieldName;
-
-        input.value = fieldValue;
-
-      }
-
-      else if (document.getElementById) { // so here is the
-
-                                          // NN6 workaround
-
-        input.setAttribute('type', fieldType);
-
-        input.setAttribute('name', fieldName);
-
-        input.setAttribute('value', fieldValue);
-
-      }
-
-    form.appendChild(input);
-
-  }
-
-}
-
-function getField (form, fieldName) {
-
-  if (!document.all)
-
-    return form[fieldName];
-
-  else  // IE has a bug not adding dynamically created field 
-
-        // as named properties so we loop through the elements array 
-
-    for (var e = 0; e < form.elements.length; e++)
-
-      if (form.elements[e].name == fieldName)
-
-        return form.elements[e];
-
-  return null;
-
-}        
-
-function removeField (form, fieldName) {
-
-  var field = getField (form, fieldName);
-
-  if (field && !field.length)
-
-    field.parentNode.removeChild(field);
-
-}
-
-function toggleField (form, fieldName, value) {
-
-  var field = getField (form, fieldName);
-
-  if (field)
-
-    removeField (form, fieldName);
-
-  else
-
-    addField (form, 'hidden', fieldName, value);
-
-}
-
-
-
-
-
-function sf() {
-
-  document.f.q.focus();
-
-}
-
-
-
-// -->
-
-</SCRIPT>
-
-
-
-</HEAD>
-
-<BODY text=#000000 vLink=#551a8b aLink=#ff0000 link=#0000cc bgColor=#ffffff 
-
-onload=sf()>
-
-<CENTER><IMG alt="search" src="/files/search.png"><BR><BR>
-
-<FORM name=f action="http://www.google.com/search">
-
-<TABLE cellSpacing=0 cellPadding=0>
-
-  <TBODY>
-
-  <TR>
-
-        <TD align=middle>
-
-	<INPUT maxLength=256 size=55 name=q><INPUT type=button value="Proxy" name=btnPx onClick="document.location='p.php?url=' + document.f.q.value"><BR>
-
-	<INPUT type=submit value="Google" name=btnGo>
-
-  <INPUT type=button value="Google CZ" name=btnGcs onClick="document.location='http://www.google.com/search?q=' + document.f.q.value + '&lr=lang_cs'">
-
-  <INPUT type=button value="Google Video" name=btnGv onClick="document.location='http://www.google.com/search?tbm=vid&q=' + document.f.q.value">
-
-  <INPUT type=button value="Google Maps" name=btnGm onClick="document.location='http://maps.google.com/maps?q=' + document.f.q.value">
-
-  <INPUT type=button value="Google Images" name=btnGi onClick="document.location='http://images.google.com/images?q=' + document.f.q.value">
-
-  <INPUT type=button value="Google by images" name=btnGbi onClick="document.location='http://www.google.com/searchbyimage?hl=en&image_url=' + document.f.q.value">
-
-        </TD>
-
-  </TR>
-
-  <TR>
-
-        <TD align=middle>
-
-	<INPUT type=button value="Wiki" name=btnWk onClick="document.location='http://en.wikipedia.org/wiki/Special:Search?search=' + document.f.q.value">
-
-	<INPUT type=button value="WikiTravel" name=btnWt onClick="document.location='http://wikitravel.org/wiki/en/index.php?search=' + document.f.q.value">
-
-	<INPUT type=button value="Luxor" name=btnLx onClick="document.location='http://www.neoluxor.cz/katalog/hledani/?searchstring=' + document.f.q.value">
-
-	<INPUT type=button value="The Free Dictionary" name=btnFd onClick="document.location='http://www.thefreedictionary.com/' + document.f.q.value">
-
-  <INPUT type=button value="TripAdvisor" name=btnTa onClick="document.location='http://www.tripadvisor.com/Search?q=' + document.f.q.value">
-
-  <INPUT type=button value="Airport Codes" name=btnAc onClick="document.location='http://www.world-airport-codes.com/search/?apt=' + document.f.q.value">
-
-	<INPUT type=button value="Mapy.cz" name=btnUp onClick="document.location='http://www.mapy.cz/?query=' + document.f.q.value">
-
-        </TD>
-
-  </TR>
-
-  <TR>
-
-        <TD align=middle>
-
-	<INPUT type=button value="EN->SK" name=btnES onClick="document.location='http://slovnik.azet.sk/preklad/anglicko-slovensky/?q=' + document.f.q.value">
-
-	<INPUT type=button value="SK->EN" name=btnSE onClick="document.location='http://slovnik.azet.sk/preklad/slovensko-anglicky/?q=' + document.f.q.value">
-
-	<INPUT type=button value="Code Project" name=btnCp onClick="document.location='http://www.codeproject.com/Info/Search.aspx?searchkw=' + document.f.q.value">
-
-	<INPUT type=button value="Sourceforge" name=btnSf onClick="document.location='http://sourceforge.net/search/index.php?Search=Search&type_of_search=soft&words=' + document.f.q.value + ' AND -has_file:(0)'">
-
-	<INPUT type=button value="Subtitles" name=btnSt onClick="document.location='http://www.opensubtitles.org/cs/search2/sublanguageid-cze,slo/moviename-' + document.f.q.value">
-
-	<INPUT type=button value="IMDB" name=btnIM onClick="document.location='http://www.imdb.com/find?tt=on;nm=on;mx=20;q=' + document.f.q.value">
-
-	<INPUT type=button value="CSFD" name=btnCsfd onClick="document.location='http://www.csfd.cz/hledani-filmu-hercu-reziseru-ve-filmove-databazi/?search=' + document.f.q.value">
-
-        </TD>
-
-  </TR>
-
-  <TR>
-
-          <TD align=middle>
-
-	<INPUT type=button value="WayBack" name=btnWb onClick="document.location='https://web.archive.org/web/*/' + document.f.q.value">
-
-	<INPUT type=button value="KickAss" name=btnKa onClick="document.location='https://kat.cr/usearch/' + document.f.q.value">
-
-  <INPUT type=button value="eBooks 3000" name=btnE3 onClick="document.location='http://www.ebook3000.com/plus/search.php?keyword=' + document.f.q.value">
-
-	<INPUT type=button value="Process search" name=btnPs onClick="document.location='http://www.processlibrary.com/directory?files=' + document.f.q.value">
-
-	<INPUT type=button value="MIDI" name=btnMd onClick="document.location='http://www.midisite.co.uk/cgi-bin/midi/search.pl?m=0&x=50&t=' + document.f.q.value">
-
-  <INPUT type=button value="FTP search" name=btnFt onClick="document.location='http://www.filesearching.com/cgi-bin/s?t=f&d=&l=en&x=0&y=0&q=' + document.f.q.value">
-
-        </TD>
-
-  </TR>
-
-  <TR>
-
-          <TD align=middle>ceny</TD>
-
-  </TR>
-
-  <TR>
-
-          <TD align=middle>
-
-	<INPUT type=button value="Heureka" name=btnHe onClick="document.location='http://www.heureka.cz/?h[fraze]=' + document.f.q.value">
-
-	<INPUT type=button value="CZC" name=btnCz onClick="document.location='http://www.czc.cz/search?q-fulltext=' + document.f.q.value">
-
-	<INPUT type=button value="Alza" name=btnAz onClick="document.location='https://www.alza.cz/search.htm?exps=' + document.f.q.value">
-
-	<INPUT type=button value="Mironet" name=btnMn onClick="document.location='http://www.mironet.cz/Search.asp?EXPS=' + document.f.q.value">
-
-	<INPUT type=button value="Mall" name=btnMa onClick="document.location='http://www.mall.cz/hledej?s=' + document.f.q.value">
-
-	<INPUT type=button value="Idealo.de" name=btnIe onClick="document.location='http://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=' + document.f.q.value">
-
-	<INPUT type=button value="pricegrabber.co.uk" name=btnPg onClick="document.location='http://pricegrabber.co.uk/search_request.php?form_keyword=' + document.f.q.value">
-
-	<INPUT type=button value="B&H" name=btnBh onClick="document.location='http://www.bhphotovideo.com/c/search?N=0&InitialSearch=yes&Ntt=' + document.f.q.value">
-
-	<INPUT type=button value="Amazon" name=btnAm onClick="document.location='http://www.amazon.com/exec/obidos/search-handle-url/index%3Dblended%26field-keywords%3D' + document.f.q.value + '%26store-name%3Dall-product-search/104-2777077-5703145'">
-
-  <INPUT type=button value="eBay" name=btneBay onClick="document.location='http://www.ebay.com/sch/i.html?_sacat=0&_from=R40&_nkw=' + document.f.q.value">  
-
-	
-
-          </TD>
-
-</TR></TBODY></TABLE>
-
-</FORM>
-
-<TABLE cellSpacing=2 cellPadding=2>
-
-  <TBODY>
-
-  <TR>
-
-        <TD>Filmmusic forums: </TD>
-
-        <TD>
-
-        <a href="http://vi-control.net/portal/">vi-control.net</a>&nbsp;&nbsp;&nbsp;
-
-        <a href="http://www.soundsonline-forums.com/">Soundsonline</a>&nbsp;&nbsp;&nbsp;
-
-        <a href="http://forum.audionews.ru/search.php?search_id=newposts">Audionews</a>&nbsp;&nbsp;&nbsp;
-
-        <a href="http://www.northernsounds.com/forum/">Northern Sound Source</a>&nbsp;&nbsp;&nbsp;      
-
-        </TD>
-
-  </TR>
-
-  <TR>
-
-        <TD>Trance forums: </TD>
-
-        <TD>
-
-        <a href="http://trance.nu/v4/forum">Trance.nu</a>&nbsp;&nbsp;&nbsp;
-
-        <a href="http://www.puretrancers.com/">Pure Trancers</a>&nbsp;&nbsp;&nbsp;
-
-        <a href="http://www.tranceaddict.com/forums/index.php">Tranceaddict</a>&nbsp;&nbsp;&nbsp;
-
-        <a href="http://www.futureproducers.com/forums/forumdisplay.php?f=86">Future producers</a>&nbsp;&nbsp;&nbsp;
-
-        <a href="http://www.djmix.fm">DJ MIX FM</a>&nbsp;&nbsp;&nbsp;
-
-        <a href="http://lindmik.sjoholm.dk/cues">CUE files</a>&nbsp;&nbsp;&nbsp;
-
-        </TD>
-
-  </TR>
-
-  <TR>
-
-        <TD>Music: </TD>
-
-        <TD>
-
-        <a href="http://www.pluginaudio.net/dle/">Plugin Audio</a>&nbsp;&nbsp;&nbsp;      
-
-        </TD>
-
-        
-
-        
-
-  </TR>
-
-  <TR>
-
-        <TD>Photography: </TD>
-
-        <TD>
-
-        <a href="http://www.dpreview.com">DP preview</a>&nbsp;&nbsp;&nbsp;
-
-        <a href="http://www.photozone.de">PhotoZone</a>&nbsp;&nbsp;&nbsp;
-
-        <a href="http://www.popphoto.com">Pop Photo</a>&nbsp;&nbsp;&nbsp;
-
-        <a href="http://www.slrgear.com">SLR Gear</a>&nbsp;&nbsp;&nbsp;
-
-        <a href="http://www.bobatkins.com/photography/">Bob Atkins</a>&nbsp;&nbsp;&nbsp;
-
-        <a href="http://www.fredmiranda.com">FredMiranda</a>&nbsp;&nbsp;&nbsp;
-
-        </TD>
-
-  </TR>
-
-  <TR>
-
-        <TD>Video: </TD>
-
-        <TD>
-
-        <a href="http://www.cinema5d.com/index.php">Cinema 5D</a>&nbsp;&nbsp;&nbsp;   
-
-        <a href="http://blog.planet5d.com">Planet 5D</a>&nbsp;&nbsp;&nbsp;
-
-        <a href="http://www.canon5dtips.com">Canon 5D tips</a>&nbsp;&nbsp;&nbsp;
-
-        <a href="http://philipbloom.co.uk">Philip Bloom</a>&nbsp;&nbsp;&nbsp;
-
-        <a href="http://cheesycam.com">CheesyCam</a>&nbsp;&nbsp;&nbsp;
-
-        </TD>
-
-  </TR>
-
-  </TBODY>
-
-</TABLE>
-</body></html>
+<HTML>
+   <HEAD>
+      <TITLE>Hoogle</TITLE>
+      <META http-equiv=content-type content="text/html; charset=UTF-8">
+      <STYLE>BODY {
+         FONT-FAMILY: tahoma,arial,sans-serif
+         }
+         TD {
+         FONT-FAMILY: tahoma,arial,sans-serif
+         }
+         A {
+         FONT-FAMILY: tahoma,arial,sans-serif
+         }
+         P {
+         FONT-FAMILY: tahoma,arial,sans-serif
+         }
+         .h {
+         FONT-FAMILY: tahoma,arial,sans-serif
+         }
+         .h {
+         FONT-SIZE: 20px
+         }
+         .q {
+         COLOR: #0000cc
+         }
+      </STYLE>
+      <SCRIPT>
+         <!--
+         
+         function addField (form, fieldType, fieldName, fieldValue) {
+         
+           if (document.getElementById) {
+         
+             var input = document.createElement('INPUT');
+         
+               if (document.all) { // what follows should work 
+         
+                                   // with NN6 but doesn't in M14
+         
+                 input.type = fieldType;
+         
+                 input.name = fieldName;
+         
+                 input.value = fieldValue;
+         
+               }
+         
+               else if (document.getElementById) { // so here is the
+         
+                                                   // NN6 workaround
+         
+                 input.setAttribute('type', fieldType);
+         
+                 input.setAttribute('name', fieldName);
+         
+                 input.setAttribute('value', fieldValue);
+         
+               }
+         
+             form.appendChild(input);
+         
+           }
+         
+         }
+         
+         function getField (form, fieldName) {
+         
+           if (!document.all)
+         
+             return form[fieldName];
+         
+           else  // IE has a bug not adding dynamically created field 
+         
+                 // as named properties so we loop through the elements array 
+         
+             for (var e = 0; e < form.elements.length; e++)
+         
+               if (form.elements[e].name == fieldName)
+         
+                 return form.elements[e];
+         
+           return null;
+         
+         }        
+         
+         function removeField (form, fieldName) {
+         
+           var field = getField (form, fieldName);
+         
+           if (field && !field.length)
+         
+             field.parentNode.removeChild(field);
+         
+         }
+         
+         function toggleField (form, fieldName, value) {
+         
+           var field = getField (form, fieldName);
+         
+           if (field)
+         
+             removeField (form, fieldName);
+         
+           else
+         
+             addField (form, 'hidden', fieldName, value);
+         
+         }
+         
+         
+         
+         
+         
+         function sf() {
+         
+           document.f.q.focus();
+         
+         }
+         
+         
+         
+         // -->
+         
+      </SCRIPT>
+   </HEAD>
+   <BODY text=#000000 vLink=#551a8b aLink=#ff0000 link=#0000cc bgColor=#ffffff 
+      onload=sf()>
+      <CENTER>
+	      <p>search</p><BR>
+      <FORM name=f action="http://www.google.com/search">
+         <TABLE cellSpacing=0 cellPadding=0>
+            <TBODY>
+               <TR>
+                  <TD align=middle>
+                     <INPUT maxLength=256 size=55 name=q><INPUT type=button value="Proxy" name=btnPx onClick="document.location='p.php?url=' + document.f.q.value"><BR>
+                     <INPUT type=submit value="Google" name=btnGo>
+                     <INPUT type=button value="Google CZ" name=btnGcs onClick="document.location='http://www.google.com/search?q=' + document.f.q.value + '&lr=lang_cs'">
+                     <INPUT type=button value="Google Video" name=btnGv onClick="document.location='http://www.google.com/search?tbm=vid&q=' + document.f.q.value">
+                     <INPUT type=button value="Google Maps" name=btnGm onClick="document.location='http://maps.google.com/maps?q=' + document.f.q.value">
+                     <INPUT type=button value="Google Images" name=btnGi onClick="document.location='http://images.google.com/images?q=' + document.f.q.value">
+                     <INPUT type=button value="Google by images" name=btnGbi onClick="document.location='http://www.google.com/searchbyimage?hl=en&image_url=' + document.f.q.value">
+                  </TD>
+               </TR>
+               <TR>
+                  <TD align=middle>
+                     <INPUT type=button value="Wiki" name=btnWk onClick="document.location='http://en.wikipedia.org/wiki/Special:Search?search=' + document.f.q.value">
+                     <INPUT type=button value="WikiTravel" name=btnWt onClick="document.location='http://wikitravel.org/wiki/en/index.php?search=' + document.f.q.value">
+                     <INPUT type=button value="Luxor" name=btnLx onClick="document.location='http://www.neoluxor.cz/katalog/hledani/?searchstring=' + document.f.q.value">
+                     <INPUT type=button value="The Free Dictionary" name=btnFd onClick="document.location='http://www.thefreedictionary.com/' + document.f.q.value">
+                     <INPUT type=button value="TripAdvisor" name=btnTa onClick="document.location='http://www.tripadvisor.com/Search?q=' + document.f.q.value">
+                     <INPUT type=button value="Airport Codes" name=btnAc onClick="document.location='http://www.world-airport-codes.com/search/?apt=' + document.f.q.value">
+                     <INPUT type=button value="Mapy.cz" name=btnUp onClick="document.location='http://www.mapy.cz/?query=' + document.f.q.value">
+                  </TD>
+               </TR>
+               <TR>
+                  <TD align=middle>
+                     <INPUT type=button value="EN->SK" name=btnES onClick="document.location='http://slovnik.azet.sk/preklad/anglicko-slovensky/?q=' + document.f.q.value">
+                     <INPUT type=button value="SK->EN" name=btnSE onClick="document.location='http://slovnik.azet.sk/preklad/slovensko-anglicky/?q=' + document.f.q.value">
+                     <INPUT type=button value="Code Project" name=btnCp onClick="document.location='http://www.codeproject.com/Info/Search.aspx?searchkw=' + document.f.q.value">
+                     <INPUT type=button value="Sourceforge" name=btnSf onClick="document.location='http://sourceforge.net/search/index.php?Search=Search&type_of_search=soft&words=' + document.f.q.value + ' AND -has_file:(0)'">
+                     <INPUT type=button value="Subtitles" name=btnSt onClick="document.location='http://www.opensubtitles.org/cs/search2/sublanguageid-cze,slo/moviename-' + document.f.q.value">
+                     <INPUT type=button value="IMDB" name=btnIM onClick="document.location='http://www.imdb.com/find?tt=on;nm=on;mx=20;q=' + document.f.q.value">
+                     <INPUT type=button value="CSFD" name=btnCsfd onClick="document.location='http://www.csfd.cz/hledani-filmu-hercu-reziseru-ve-filmove-databazi/?search=' + document.f.q.value">
+                  </TD>
+               </TR>
+               <TR>
+                  <TD align=middle>
+                     <INPUT type=button value="WayBack" name=btnWb onClick="document.location='https://web.archive.org/web/*/' + document.f.q.value">
+                     <INPUT type=button value="KickAss" name=btnKa onClick="document.location='https://kat.cr/usearch/' + document.f.q.value">
+                     <INPUT type=button value="eBooks 3000" name=btnE3 onClick="document.location='http://www.ebook3000.com/plus/search.php?keyword=' + document.f.q.value">
+                     <INPUT type=button value="Process search" name=btnPs onClick="document.location='http://www.processlibrary.com/directory?files=' + document.f.q.value">
+                     <INPUT type=button value="MIDI" name=btnMd onClick="document.location='http://www.midisite.co.uk/cgi-bin/midi/search.pl?m=0&x=50&t=' + document.f.q.value">
+                     <INPUT type=button value="FTP search" name=btnFt onClick="document.location='http://www.filesearching.com/cgi-bin/s?t=f&d=&l=en&x=0&y=0&q=' + document.f.q.value">
+                  </TD>
+               </TR>
+               <TR>
+                  <TD align=middle>ceny</TD>
+               </TR>
+               <TR>
+                  <TD align=middle>
+                     <INPUT type=button value="Heureka" name=btnHe onClick="document.location='http://www.heureka.cz/?h[fraze]=' + document.f.q.value">
+                     <INPUT type=button value="CZC" name=btnCz onClick="document.location='http://www.czc.cz/search?q-fulltext=' + document.f.q.value">
+                     <INPUT type=button value="Alza" name=btnAz onClick="document.location='https://www.alza.cz/search.htm?exps=' + document.f.q.value">
+                     <INPUT type=button value="Mironet" name=btnMn onClick="document.location='http://www.mironet.cz/Search.asp?EXPS=' + document.f.q.value">
+                     <INPUT type=button value="Mall" name=btnMa onClick="document.location='http://www.mall.cz/hledej?s=' + document.f.q.value">
+                     <INPUT type=button value="Idealo.de" name=btnIe onClick="document.location='http://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=' + document.f.q.value">
+                     <INPUT type=button value="pricegrabber.co.uk" name=btnPg onClick="document.location='http://pricegrabber.co.uk/search_request.php?form_keyword=' + document.f.q.value">
+                     <INPUT type=button value="B&H" name=btnBh onClick="document.location='http://www.bhphotovideo.com/c/search?N=0&InitialSearch=yes&Ntt=' + document.f.q.value">
+                     <INPUT type=button value="Amazon" name=btnAm onClick="document.location='http://www.amazon.com/exec/obidos/search-handle-url/index%3Dblended%26field-keywords%3D' + document.f.q.value + '%26store-name%3Dall-product-search/104-2777077-5703145'">
+                     <INPUT type=button value="eBay" name=btneBay onClick="document.location='http://www.ebay.com/sch/i.html?_sacat=0&_from=R40&_nkw=' + document.f.q.value">  
+                  </TD>
+               </TR>
+            </TBODY>
+         </TABLE>
+      </FORM>
+      <TABLE cellSpacing=2 cellPadding=2>
+         <TBODY>
+            <TR>
+               <TD>Filmmusic forums: </TD>
+               <TD>
+                  <a href="http://vi-control.net/portal/">vi-control.net</a>&nbsp;&nbsp;&nbsp;
+                  <a href="http://www.soundsonline-forums.com/">Soundsonline</a>&nbsp;&nbsp;&nbsp;
+                  <a href="http://forum.audionews.ru/search.php?search_id=newposts">Audionews</a>&nbsp;&nbsp;&nbsp;
+                  <a href="http://www.northernsounds.com/forum/">Northern Sound Source</a>&nbsp;&nbsp;&nbsp;      
+               </TD>
+            </TR>
+            <TR>
+               <TD>Trance forums: </TD>
+               <TD>
+                  <a href="http://trance.nu/v4/forum">Trance.nu</a>&nbsp;&nbsp;&nbsp;
+                  <a href="http://www.puretrancers.com/">Pure Trancers</a>&nbsp;&nbsp;&nbsp;
+                  <a href="http://www.tranceaddict.com/forums/index.php">Tranceaddict</a>&nbsp;&nbsp;&nbsp;
+                  <a href="http://www.futureproducers.com/forums/forumdisplay.php?f=86">Future producers</a>&nbsp;&nbsp;&nbsp;
+                  <a href="http://www.djmix.fm">DJ MIX FM</a>&nbsp;&nbsp;&nbsp;
+                  <a href="http://lindmik.sjoholm.dk/cues">CUE files</a>&nbsp;&nbsp;&nbsp;
+               </TD>
+            </TR>
+            <TR>
+               <TD>Music: </TD>
+               <TD>
+                  <a href="http://www.pluginaudio.net/dle/">Plugin Audio</a>&nbsp;&nbsp;&nbsp;      
+               </TD>
+            </TR>
+            <TR>
+               <TD>Photography: </TD>
+               <TD>
+                  <a href="http://www.dpreview.com">DP preview</a>&nbsp;&nbsp;&nbsp;
+                  <a href="http://www.photozone.de">PhotoZone</a>&nbsp;&nbsp;&nbsp;
+                  <a href="http://www.popphoto.com">Pop Photo</a>&nbsp;&nbsp;&nbsp;
+                  <a href="http://www.slrgear.com">SLR Gear</a>&nbsp;&nbsp;&nbsp;
+                  <a href="http://www.bobatkins.com/photography/">Bob Atkins</a>&nbsp;&nbsp;&nbsp;
+                  <a href="http://www.fredmiranda.com">FredMiranda</a>&nbsp;&nbsp;&nbsp;
+               </TD>
+            </TR>
+            <TR>
+               <TD>Video: </TD>
+               <TD>
+                  <a href="http://www.cinema5d.com/index.php">Cinema 5D</a>&nbsp;&nbsp;&nbsp;   
+                  <a href="http://blog.planet5d.com">Planet 5D</a>&nbsp;&nbsp;&nbsp;
+                  <a href="http://www.canon5dtips.com">Canon 5D tips</a>&nbsp;&nbsp;&nbsp;
+                  <a href="http://philipbloom.co.uk">Philip Bloom</a>&nbsp;&nbsp;&nbsp;
+                  <a href="http://cheesycam.com">CheesyCam</a>&nbsp;&nbsp;&nbsp;
+               </TD>
+            </TR>
+         </TBODY>
+      </TABLE>
+   </body>
+</html>
