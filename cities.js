@@ -275,6 +275,11 @@ var cities = [
 		"longitude": "32.6422"
 	},
 	{
+		"title": "Macau",
+		"latitude": "22.2109",
+		"longitude": "13.5530"
+	},
+	{
 		"title": "Malaga",
 		"latitude": "36.7167",
 		"longitude": "-4.4167"
@@ -318,11 +323,6 @@ var cities = [
 		"title": "Munich",
 		"latitude": "48.1372",
 		"longitude": "11.5755"
-	},
-	{
-		"title": "Nara",
-		"latitude": "34.6833",
-		"longitude": "135.7833"
 	},
 	{
 		"title": "Nashville",
@@ -465,6 +465,11 @@ var cities = [
 		"longitude": "-122.3244"
 	},
 	{
+		"title": "Shenzhen",
+		"latitude": "22.5429",
+		"longitude": "114.0630"
+	},
+	{
 		"title": "Shanghai",
 		"latitude": "31.1667",
 		"longitude": "121.4667"
@@ -498,6 +503,11 @@ var cities = [
 		"title": "Tampa",
 		"latitude": "27.9942",
 		"longitude": "-82.4451"
+	},
+	{
+		"title": "Tel Aviv",
+		"latitude": "32.1093",
+		"longitude": "34.8555"
 	},
 	{
 		"title": "Toronto",
