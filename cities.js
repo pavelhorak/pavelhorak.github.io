@@ -285,6 +285,11 @@ var cities = [
 		"longitude": "-2.2453"
 	},
 	{
+		"title": "Marrakesh",
+		"latitude": "31.6286",
+		"longitude": "-7.9920"
+	},
+	{
 		"title": "Melbourne",
 		"latitude": "-37.8410",
 		"longitude": "144.9464"
@@ -438,6 +443,11 @@ var cities = [
 		"title": "San Marino",
 		"latitude": "43.932",
 		"longitude": "12.4484"
+	},
+	{
+		"title": "Santiago de Chile",
+		"latitude": "-33.4475",
+		"longitude": "-70.6736"
 	},
 	{
 		"title": "Santo Domingo",
