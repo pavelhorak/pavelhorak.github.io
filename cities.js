@@ -277,7 +277,7 @@ var cities = [
 	{
 		"title": "Macau",
 		"latitude": "22.2109",
-		"longitude": "13.5530"
+		"longitude": "113.5530"
 	},
 	{
 		"title": "Malaga",
