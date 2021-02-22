@@ -405,6 +405,11 @@ var cities = [
 		"longitude": "14.4322"
 	},
 	{
+		"title": "Rio de Janeiro",
+		"latitude": "-22.9083",
+		"longitude": "-43.1964"
+	},
+	{
 		"title": "Rome",
 		"latitude": "41.8931",
 		"longitude": "12.4828"
