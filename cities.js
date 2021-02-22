@@ -420,11 +420,6 @@ var cities = [
 		"longitude": "-98.5253"
 	},
 	{
-		"title": "San Antonio",
-		"latitude": "18.4468",
-		"longitude": "-66.3002"
-	},
-	{
 		"title": "San Diego",
 		"latitude": "32.8312",
 		"longitude": "-117.1225"
