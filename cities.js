@@ -160,6 +160,11 @@ var cities = [
 		"longitude": "12.5635"
 	},
 	{
+		"title": "Corfu",
+		"latitude": "39.6239",
+		"longitude": "19.9214"
+	},
+	{
 		"title": "Dallas",
 		"latitude": "32.7936",
 		"longitude": "-96.7662"
@@ -213,6 +218,11 @@ var cities = [
 		"title": "Hamburg",
 		"latitude": "53.55",
 		"longitude": "10"
+	},
+	{
+		"title": "Hamnoy",
+		"latitude": "67.95",
+		"longitude": "13.1333"
 	},
 	{
 		"title": "Hong Kong",
