@@ -310,6 +310,11 @@ var cities = [
 		"longitude": "9.19"
 	},
 	{
+		"title": "Miami",
+		"latitude": "25.7617",
+		"longitude": "-80.1917"
+	},
+	{
 		"title": "Milwaukee",
 		"latitude": "43.0642",
 		"longitude": "-87.9673"
@@ -558,6 +563,11 @@ var cities = [
 		"title": "Warsaw",
 		"latitude": "52.2167",
 		"longitude": "21.0333"
+	},
+	{
+		"title": "Washington DC",
+		"latitude": "38.8892",
+		"longitude": "-77.0506"
 	},
 	{
 		"title": "Wellington",
