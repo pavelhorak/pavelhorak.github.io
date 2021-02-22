@@ -360,6 +360,11 @@ var cities = [
 		"longitude": "7.42732"
 	},
 	{
+		"title": "Moscow",
+		"latitude": "55.7512",
+		"longitude": "37.6184"
+	},
+	{
 		"title": "Munich",
 		"latitude": "48.1372",
 		"longitude": "11.5755"
