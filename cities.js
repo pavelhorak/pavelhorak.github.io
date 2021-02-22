@@ -225,6 +225,11 @@ var cities = [
 		"longitude": "-157.846"
 	},
 	{
+		"title": "Houston",
+		"latitude": "29.7499",
+		"longitude": "-95.3584"
+	},
+	{
 		"title": "Idaho Falls",
 		"latitude": "43.4872",
 		"longitude": "-112.0362"
@@ -245,6 +250,11 @@ var cities = [
 		"longitude": "19.9372"
 	},
 	{
+		"title": "Kaohsiung City",
+		"latitude": "22.6273",
+		"longitude": "120.3014"
+	},
+	{
 		"title": "Kyoto",
 		"latitude": "35.0111",
 		"longitude": "135.7669"
@@ -258,6 +268,11 @@ var cities = [
 		"title": "Lisbon",
 		"latitude": "38.7452",
 		"longitude": "-9.1604"
+	},
+	{
+		"title": "Ljubljana",
+		"latitude": "46.0569",
+		"longitude": "14.5058"
 	},
 	{
 		"title": "London",
@@ -300,6 +315,11 @@ var cities = [
 		"longitude": "144.9464"
 	},
 	{
+		"title": "Memphis",
+		"latitude": "35.1175",
+		"longitude": "-89.9711"
+	},
+	{
 		"title": "Milan",
 		"latitude": "45.4669",
 		"longitude": "9.19"
@@ -323,6 +343,11 @@ var cities = [
 		"title": "Montreal",
 		"latitude": "45.5089",
 		"longitude": "-73.5617"
+	},
+	{
+		"title": "Monte Carlo",
+		"latitude": "43.73976",
+		"longitude": "7.42732"
 	},
 	{
 		"title": "Munich",
@@ -388,6 +413,11 @@ var cities = [
 		"title": "Providence",
 		"latitude": "41.823",
 		"longitude": "-71.4187"
+	},
+	{
+		"title": "Punta Cana",
+		"latitude": "18.5818",
+		"longitude": "-68.4043"
 	},
 	{
 		"title": "Queenstown",
@@ -540,6 +570,11 @@ var cities = [
 		"longitude": "83.0128"
 	},
 	{
+		"title": "Vatican City",
+		"latitude": "41.9024",
+		"longitude": "12.4533"
+	},
+	{
 		"title": "Venice",
 		"latitude": "45.4397",
 		"longitude": "12.3319"
@@ -573,5 +608,10 @@ var cities = [
 		"title": "Wroclaw",
 		"latitude": "51.1077",
 		"longitude": "17.0353"
+	},
+	{
+		"title": "Zurrich",
+		"latitude": "47.3686",
+		"longitude": "8.5392"
 	}
 ];
