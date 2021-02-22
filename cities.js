@@ -155,11 +155,6 @@ var cities = [
 		"longitude": "172.6365"
 	},
 	{
-		"title": "Christchurch",
-		"latitude": "50.73",
-		"longitude": "-1.78"
-	},
-	{
 		"title": "Copenhagen",
 		"latitude": "55.6786",
 		"longitude": "12.5635"

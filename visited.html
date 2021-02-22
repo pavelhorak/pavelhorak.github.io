@@ -30,6 +30,7 @@
     ></div>
     <div id="chartdiv"></div>
   </body>
+  <script src="cities.js"></script>
   <script>
     var landmarks = [
       "Aarhus",
@@ -158,9 +159,9 @@
       "Zurrich",
     ];
     landmarks.sort();
-    landmarks.forEach(function (value) {
+    cities.forEach(function (value) {
       var div = document.createElement("span");
-      div.textContent = value;
+      div.textContent = value.title;
       div.setAttribute("class", "w");
       setTimeout(function () {
         div.style.opacity = Math.random().toFixed(1) * (1.0 - 0.4) + 0.4;
@@ -272,7 +273,6 @@
 <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
 <script src="https://cdn.amcharts.com/lib/4/themes/spiritedaway.js"></script>
 <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
-<script src="cities.js"></script>
 <!-- Chart code -->
 <script>
 am4core.ready(function() {
