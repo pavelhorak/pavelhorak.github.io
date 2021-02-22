@@ -128,6 +128,11 @@ var cities = [
 		"title": "Cairo",
 		"latitude": "30.0561",
 		"longitude": "31.2394"
+	}, 
+	{
+		"title": "Canaima",
+		"latitude": "6.2258 ",
+		"longitude": "-62.8525"
 	},
 	{
 		"title": "Canberra",
