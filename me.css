@@ -1,5 +1,16 @@
 /* -- CSS Reset -- */
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500");
+
+.w {
+  opacity: 0;
+  transition: opacity 1s linear;
+  color: #ffffff;
+  font-size: 18px;
+  white-space: nowrap;
+  height: 20px;
+  padding: 0px 8px 0px 8px;
+}
+
 html,
 body,
 div,
@@ -274,14 +285,7 @@ body.page-template-page-fullsingle-me p {
   height: auto;
 }
 
-.w {
-  opacity: 0;
-  transition: opacity 1s linear;
-  color: #ffffff;
-  font-size: 18px;
-  white-space: nowrap;
-  padding: 0px 8px 0px 8px;
-}
+
 .bio {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
