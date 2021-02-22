@@ -285,6 +285,11 @@ var cities = [
 		"longitude": "-2.2453"
 	},
 	{
+		"title": "Melbourne",
+		"latitude": "-37.8410",
+		"longitude": "144.9464"
+	},
+	{
 		"title": "Milan",
 		"latitude": "45.4669",
 		"longitude": "9.19"
