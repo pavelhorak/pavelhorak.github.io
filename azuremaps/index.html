@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Continuous User Position Tracking - Azure Maps Web SDK Samples</title>
+    <title>Azure Maps Navigation</title>
 
     <meta charset="utf-8" />
 	<link rel="shortcut icon" href="/favicon.ico"/>
@@ -51,6 +51,7 @@
                 //Add a layer for rendering the users location as a symbol.
                 map.layers.add(new atlas.layer.SymbolLayer(datasource));
             });
+	    startTracking();
         }
 
         function startTracking() {
@@ -110,15 +111,5 @@
 </head>
 <body onload="GetMap()">
     <div id="myMap" style="position:relative;width:100%;min-width:290px;height:600px;"></div>
-
-    <div style="position:absolute;top:15px;left:15px;background-color:white;padding:10px;border-radius:10px;">
-        <input type="button" value="Start Continuous Tracking" onclick="startTracking()" />
-        <input type="button" value="Stop Continuous Tracking" onclick="stopTracking()" />
-    </div>
-
-    <fieldset style="width:calc(100% - 30px);min-width:290px;margin-top:10px;">
-        <legend><h1 style="font-size:16px">Continuous User Position Tracking</h1></legend>
-        This sample shows how to continuously get the users position information from the browser by using the HTML5 geolocation API and update it on a map.
-    </fieldset>
 </body>
 </html>
