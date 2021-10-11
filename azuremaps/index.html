@@ -209,7 +209,10 @@
 
                 var properties = e.shapes[0].getProperties();
 
-                //Update the content and position of the popup.
+                map.controls.add(new atlas.control.TrafficControl(), {
+                    position: 'top-right'
+                });
+               //Update the content and position of the popup.
                 popup.setOptions({
                     //Create the content of the popup.
                     content: `<div style="padding:10px;"><b>${properties.simpleCategory}</b><br/>Speed: ${Math.round(properties.effectiveSpeedInKmh * 0.62137119)} mph</div`,
