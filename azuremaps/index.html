@@ -75,6 +75,7 @@
                 });
 
                map.events.add('geolocationsuccess', geolocationControl, function(arg){
+		       alert(arg);
     			//Do something.
 		       lat = arg.latitude;
 		       lng = arg.longitude;
