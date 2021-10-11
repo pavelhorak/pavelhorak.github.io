@@ -75,7 +75,7 @@
                 });
 
                map.events.add('geolocationsuccess', geolocationControl, function(arg){
-		       alert(arg);
+		       alert(JSON.stringify(arg, null, '    ').replace(/\"([^(\")"]+)\":/g, "$1:"));
     			//Do something.
 		       lat = arg.latitude;
 		       lng = arg.longitude;
