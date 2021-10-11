@@ -22,7 +22,7 @@
     <script src="azure-maps-geolocation-control.min.js"></script>
     
     <script type='text/javascript'>
-        var map, datasource, popup, searchURL, routeURL;
+        var map, datasource, popup, searchURL, routeURL, lat, lng;
 
         function GetMap() {
             //Initialize a map instance.
@@ -73,6 +73,14 @@
                 ], {
                     position: 'top-right'
                 });
+
+               map.events.add('geolocationerror', geolocationControl, function(arg){
+    			//Do something.
+		       lat = arg.latitude;
+		       lng = arg.longitude;
+		});
+
+               // map.events.add('geolocationsuccess', geolocationControl, displayEventInfo);
 
 		    //Create a popup for displaying route section details.
                 popup = new atlas.Popup();
@@ -143,7 +151,7 @@
                 }));     
 
                 //Calculate the initial route.
-                calculateRoute();
+                //calculateRoute();
             });
         }
 
