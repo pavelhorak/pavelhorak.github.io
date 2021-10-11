@@ -74,13 +74,13 @@
                     position: 'top-right'
                 });
 
-               map.events.add('geolocationerror', geolocationControl, function(arg){
+               map.events.add('geolocationsuccess', geolocationControl, function(arg){
     			//Do something.
 		       lat = arg.latitude;
 		       lng = arg.longitude;
 		});
 
-               // map.events.add('geolocationsuccess', geolocationControl, displayEventInfo);
+               // map.events.add('geolocationerror', geolocationControl, displayEventInfo);
 
 		    //Create a popup for displaying route section details.
                 popup = new atlas.Popup();
@@ -155,49 +155,6 @@
             });
         }
 
-        function startTracking() {
-            if (!watchId) {
-                //Watch the users position.
-                watchId = navigator.geolocation.watchPosition(function (geoPosition) {
-
-                    //Get the coordinate information from the geoPosition.
-                    var userPosition = [geoPosition.coords.longitude, geoPosition.coords.latitude];
-
-                    //TIP: altitude? in meters, speed? in meters/second and heading? in degrees are also potential properties of geoPosition.coords
-
-                    if (!userShape) {
-                        //Create a shape to show the users position and add it to the data source.
-                        userShape = new atlas.Shape(new atlas.data.Feature(new atlas.data.Point(userPosition), geoPosition));
-                        datasource.add(userShape);
-                    } else {
-                        userShape.setCoordinates(userPosition);
-                        userShape.setProperties(geoPosition);
-                    }
-
-                    //Center the map on the users position.
-                    map.setCamera({
-                        center: userPosition,
-                        zoom: 15
-                    });
-                }, function (error) {
-                    //If an error occurs when trying to access the users position information, display an error message.
-                    switch (error.code) {
-                        case error.PERMISSION_DENIED:
-                            alert('User denied the request for Geolocation.');
-                            break;
-                        case error.POSITION_UNAVAILABLE:
-                            alert('Position information is unavailable.');
-                            break;
-                        case error.TIMEOUT:
-                            alert('The request to get user position timed out.');
-                            break;
-                        case error.UNKNOWN_ERROR:
-                            alert('An unknown error occurred.');
-                            break;
-                    }
-                });
-            }
-        }
 
 	async function calculateRoute() {
             datasource.clear();
