@@ -219,7 +219,7 @@
             var startResult = await searchURL.searchAddress(atlas.service.Aborter.timeout(3000), start, geocodeOptions);
 
             if (startResult.results && startResult.results.length > 0) {
-                var startPoint = geolocationControl.showUserLocation ? lon, lat : [startResult.results[0].position.lon, startResult.results[0].position.lat];
+                var startPoint = geolocationControl.showUserLocation ? [lon, lat] : [startResult.results[0].position.lon, startResult.results[0].position.lat];
 
                 //Geocode the end location.
                 var endResult = await searchURL.searchAddress(atlas.service.Aborter.timeout(3000), end, geocodeOptions);
