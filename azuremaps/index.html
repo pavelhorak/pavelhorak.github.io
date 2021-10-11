@@ -174,9 +174,10 @@
             };
 
             //Geocode the start location.
-            var startResult = await searchURL.searchAddress(atlas.service.Aborter.timeout(3000), start, geocodeOptions);
+	    if (start != '')
+            	var startResult = await searchURL.searchAddress(atlas.service.Aborter.timeout(3000), start, geocodeOptions);
 
-            if (startResult.results && startResult.results.length > 0) {
+            if (start == '' || startResult.results && startResult.results.length > 0) {
                 var startPoint = start == '' ? [lng, lat] : [startResult.results[0].position.lon, startResult.results[0].position.lat];
 
                 //Geocode the end location.
