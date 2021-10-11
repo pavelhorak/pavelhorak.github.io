@@ -148,7 +148,7 @@
                     //Calculate a route.
                     var directions = await routeURL.calculateRouteDirections(atlas.service.Aborter.timeout(10000), [startPoint, endPoint], {
                         sectionType: 'traffic', //Route option to return traffic sections.
-                        maxAlternatives: 0
+                        maxAlternatives: 1
                     });
 
                     //Get the route data as GeoJSON and add it to the data source.
@@ -234,11 +234,11 @@
         <table>
             <tr>
                 <td>Start: </td>
-                <td><input type="text" id="startTbx" value="Seattle" /></td>
+                <td><input type="text" id="startTbx" value="Na krtine 631, prague" /></td>
             </tr>
             <tr>
                 <td>End: </td>
-                <td><input type="text" id="endTbx" value="San Diego" /></td>
+                <td><input type="text" id="endTbx" value="vyskocilova 1561, prague" /></td>
             </tr>
             <tr>
                 <td></td>
