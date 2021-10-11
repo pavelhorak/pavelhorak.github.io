@@ -57,7 +57,18 @@
 
                     //Add the geolocation control to the map.
                     new atlas.control.GeolocationControl({
-                        style: 'auto'
+                        style: 'auto',
+                showUserLocation: true,
+                trackUserLocation: true,
+                updateMapCamera: true,
+                // markerColor: document.getElementById('markerColor').value,
+                positionOption: {
+                    enableHighAccuracy: true,
+                    //maximumAge: 0,
+                    timeout: 0
+                },
+                calculateMissingValues: true,
+                maxZoom: 15
                     })
                 ], {
                     position: 'top-right'
