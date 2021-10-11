@@ -177,14 +177,14 @@
             var startResult = await searchURL.searchAddress(atlas.service.Aborter.timeout(3000), start, geocodeOptions);
 
             if (startResult.results && startResult.results.length > 0) {
-                var startPoint = /*geolocationControl.showUserLocation ?*/ [lng, lat];// : [startResult.results[0].position.lon, startResult.results[0].position.lat];
+                var startPoint = geolocationControl.showUserLocation ? [lng, lat] : [startResult.results[0].position.lon, startResult.results[0].position.lat];
 
                 //Geocode the end location.
                 var endResult = await searchURL.searchAddress(atlas.service.Aborter.timeout(3000), end, geocodeOptions);
 
                 if (endResult.results && endResult.results.length > 0) {
                     var endPoint = [endResult.results[0].position.lon, endResult.results[0].position.lat];
-			alert("lng " + lng + " lat " + lat);
+			//alert("lng " + lng + " lat " + lat);
                     //Calculate a route.
                     var directions = await routeURL.calculateRouteDirections(atlas.service.Aborter.timeout(10000), [startPoint, endPoint], {
                         sectionType: 'traffic', //Route option to return traffic sections.
