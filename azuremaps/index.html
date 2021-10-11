@@ -77,8 +77,8 @@
                map.events.add('geolocationsuccess', geolocationControl, function(arg){
 		       alert(JSON.stringify(arg, null, '    ').replace(/\"([^(\")"]+)\":/g, "$1:"));
     			//Do something.
-		       lat = arg.latitude;
-		       lng = arg.longitude;
+		       lat = arg.geometry.coordinates[0];
+		       lng = arg.geometry.coordinates[1];
 		});
 
                // map.events.add('geolocationerror', geolocationControl, displayEventInfo);
