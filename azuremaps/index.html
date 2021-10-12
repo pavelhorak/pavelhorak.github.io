@@ -51,9 +51,51 @@
 
             //Wait until the map resources are ready.
             map.events.add('ready', function () {
-                map.controls.add([
-                    //Optional. Add the map style control so we can see how the custom control reacts.
-                    new atlas.control.StyleControl(),
+                map.imageSprite.createFromTemplate('arrow-icon', 'marker-arrow', 'teal', '#fff').then(function () {
+                    //Create a data source and add it to the map.
+                    datasource = new atlas.source.DataSource();
+
+                    //Create a second data source for the animated pin.
+                    pinSource = new atlas.source.DataSource();
+                    
+                    map.sources.add([datasource, pinSource]);
+                    
+                    //Add a simple data layer for rendering the data.
+                    layer = new atlas.layer.SimpleDataLayer(datasource);
+                    map.layers.add(layer);
+
+                    //Create a layer to render a symbol which we will animate.
+                    map.layers.add(new atlas.layer.SymbolLayer(pinSource, null, {
+                        iconOptions: {
+                            //Pass in the id of the custom icon that was loaded into the map resources.
+                            image: 'arrow-icon',
+
+                            //Anchor the icon to the center of the image.
+                            anchor: 'center',
+
+                            //Rotate the icon based on the rotation property on the point data.
+                            //The arrow icon being used in this case points down, so we have to rotate it 180 degrees.
+                            rotation: ['+', 180, ['get', 'heading']],
+
+                            //Have the rotation align with the map.
+                            rotationAlignment: 'map',
+
+                            //For smoother animation, ignore the placement of the icon. This skips the label collision calculations and allows the icon to overlap map labels. 
+                            ignorePlacement: true,
+
+                            //For smoother animation, allow symbol to overlap all other symbols on the map.
+                            allowOverlap: true
+                        },
+                        textOptions: {
+                            //For smoother animation, ignore the placement of the text. This skips the label collision calculations and allows the text to overlap map labels.
+                            ignorePlacement: true,
+
+                            //For smoother animation, allow text to overlap all other symbols on the map.
+                            allowOverlap: true
+                        }
+                    }));
+                });
+                map.controls.add(
 
                     //Add the geolocation control to the map.
                     geolocationControl = new atlas.control.GeolocationControl({
@@ -64,13 +106,13 @@
                 // markerColor: document.getElementById('markerColor').value,
                 positionOption: {
                     enableHighAccuracy: true,
-                    //maximumAge: 0,
-                    timeout: 0
+                    maximumAge: 1000,
+                    timeout: 6000
                 },
                 calculateMissingValues: true,
                 maxZoom: 15
-                    })
-                ], {
+                })
+                , {
                     position: 'top-right'
                 });
 
@@ -86,14 +128,14 @@
 		    //Create a popup for displaying route section details.
                 popup = new atlas.Popup();
 
-                datasource = new atlas.source.DataSource();
-                map.sources.add(datasource);
+                //datasource = new atlas.source.DataSource();
+                //map.sources.add(datasource);
 
                 //Create two line layers. One for the base route line, and another for the traffic sections on top. Render these below the labels.
                 map.layers.add(
                     //Render the base route line. This will look like an outline in areas that have traffic.
                     new atlas.layer.LineLayer(datasource, null, {
-                        strokeWidth: 9,
+                        strokeWidth: 7,
                         lineJoin: 'round',
                         lineCap: 'round',
                         filter: ['!', ['has', 'magnitudeOfDelay']]
