@@ -63,7 +63,7 @@
                     map.layers.add(layer);
 
                     //Create a layer to render a symbol which we will animate.
- 		    userShape = new atlas.layer.SymbolLayer(pinSource, null, {
+ 		    symbolShape = new atlas.layer.SymbolLayer(pinSource, null, {
                         iconOptions: {
                             //Pass in the id of the custom icon that was loaded into the map resources.
                             image: 'arrow-icon',
@@ -92,7 +92,7 @@
                             allowOverlap: true
                         }
                     });
-                    map.layers.add(userShape);
+                    map.layers.add(symbolShape);
 		    startTracking();
                });
 		
