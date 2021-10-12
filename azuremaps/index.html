@@ -98,13 +98,13 @@
 		//Create a popup for displaying route section details.
                 popup = new atlas.Popup();
 
-                //datasource = new atlas.source.DataSource();
-                //map.sources.add(datasource);
+                ds = new atlas.source.DataSource();
+                map.sources.add(ds);
 
                 //Create two line layers. One for the base route line, and another for the traffic sections on top. Render these below the labels.
                 map.layers.add(
                     //Render the base route line. This will look like an outline in areas that have traffic.
-                    new atlas.layer.LineLayer(datasource, null, {
+                    new atlas.layer.LineLayer(ds, null, {
                         strokeWidth: 7,
                         lineJoin: 'round',
                         lineCap: 'round',
@@ -112,7 +112,7 @@
                     }), 'labels');
                                
                 //Render the traffic section data above the route line.
-                var sectionLayer = new atlas.layer.LineLayer(datasource, null, {
+                var sectionLayer = new atlas.layer.LineLayer(ds, null, {
                     //Use an expression to style the color based on the traffics magnitiude of delay metric: https://docs.microsoft.com/en-us/rest/api/maps/route/getroutedirections#magnitudeofdelay
                     strokeColor: [
                         'match',
@@ -150,7 +150,7 @@
                 map.layers.add(sectionLayer, 'labels');
 
                 //Create a layer for rendering the start and end points of the route as symbols.
-                map.layers.add(new atlas.layer.SymbolLayer(datasource, null, {
+                map.layers.add(new atlas.layer.SymbolLayer(ds, null, {
                     iconOptions: {
                         image: ['get', 'iconImage'],
                         allowOverlap: true,
