@@ -1,0 +1,7 @@
+"mapbox-streets": {
+    "type": "vector",
+    "tiles": [
+        https://atlas.microsoft.com/map/tile?subscription-key=uPW_nG_yJoSzA206l-gboCl37R9r1aba9u9vJzk2WaE&api-version=2.1&tilesetId=microsoft.base.road&zoom={z}&x={x}&y={y}
+    ],
+    "maxzoom": 20
+}
