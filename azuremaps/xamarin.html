@@ -16,13 +16,13 @@
         function toggleTraffic() {
             if(map.getTraffic().incidents) 
                 map.setTraffic({
-                    incidents: true,
-                    flow: 'relative'
+                    incidents: false,
+                    flow: 'none'
                 });
             else    
                 map.setTraffic({
-                    incidents: false,
-                    flow: 'none'
+                    incidents: true,
+                    flow: 'relative'
                 });
         }
 
