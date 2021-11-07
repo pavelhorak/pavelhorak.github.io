@@ -9,6 +9,7 @@
     <!-- Add a reference to the Azure Maps Services Module JavaScript file. -->
     <script src="https://atlas.microsoft.com/sdk/javascript/service/2/atlas-service.min.js"></script>
     <script src="https://atlas.microsoft.com/sdk/javascript/spatial/0/atlas-spatial.min.js"></script>
+    <script src="../Common/scripts/azure-maps-animations.min.js"></script>
     
     <script type='text/javascript'>
         var map, datasource, popup, searchURL, routeURL, lat, lng, userShape, watchId;
@@ -30,6 +31,7 @@
             //Initialize a map instance.
             map = new atlas.Map('myMap', {
                 view: 'Auto',
+                zoom: 14,
 
                 //Add authentication details for connecting to Azure Maps.
                 authOptions: {
@@ -39,6 +41,7 @@
             });
     		//Use MapControlCredential to share authentication between a map control and the service module.
             var pipeline = atlas.service.MapsURL.newPipeline(new atlas.service.MapControlCredential(map));
+            atlas.animations.setCoordinates( [-122.34758, 47.62155], { duration: 2000, easing: 'easeInElastic', autoPlay: true });
         }
     </script>
 </head>
