@@ -32,6 +32,7 @@
             map = new atlas.Map('myMap', {
                 view: 'Auto',
                 zoom: 14,
+                center: [50.0733, 14.4314],
 
                 //Add authentication details for connecting to Azure Maps.
                 authOptions: {
@@ -41,7 +42,7 @@
             });
     		//Use MapControlCredential to share authentication between a map control and the service module.
             var pipeline = atlas.service.MapsURL.newPipeline(new atlas.service.MapControlCredential(map));
-            atlas.animations.setCoordinates( [14.4314, 50.0733], { duration: 2000, easing: 'easeInElastic', autoPlay: true });
+            //atlas.animations.setCoordinates( , { duration: 2000, easing: 'easeInElastic', autoPlay: true });
         }
     </script>
 </head>
