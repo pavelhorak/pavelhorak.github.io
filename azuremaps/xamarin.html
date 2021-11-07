@@ -44,6 +44,17 @@
             var pipeline = atlas.service.MapsURL.newPipeline(new atlas.service.MapControlCredential(map));
             //atlas.animations.setCoordinates( , { duration: 2000, easing: 'easeInElastic', autoPlay: true });
         }
+        
+
+       function factorial(num) {
+        if (num === 0 || num === 1)
+            return 1;
+        for (var i = num - 1; i >= 1; i--) {
+            num *= i;
+        }
+        return num;
+}
+</script>
     </script>
 </head>
 <body onload="GetMap()">
